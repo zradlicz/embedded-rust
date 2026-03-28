@@ -3,10 +3,10 @@
 
 use blink as _; // global logger + panicking-behavior + memory layout
 
-mod reg;
-mod systick;
-mod gpio;
-mod timer;
+use stm32g4_drivers::reg;
+use stm32g4_drivers::systick;
+use stm32g4_drivers::gpio;
+use stm32g4_drivers::timer;
 
 #[cortex_m_rt::entry]
 fn main() -> ! {
